@@ -11,7 +11,6 @@ from typing import Optional, Tuple, Union
 
 import numpy as np
 import pandas as pd
-import math
 
 from sktime.datatypes import VectorizedDF
 from sktime.datatypes._utilities import get_time_index
@@ -22,7 +21,7 @@ def _coerce_duration_to_int(
     duration: Union[int, pd.Timedelta, pd.tseries.offsets.BaseOffset, pd.Index],
     freq: str = None,
 ) -> Union[int, pd.Index]:
-    """Coerce durations into integer representations for a given unit of duration.
+    """Coerces durations into integer representations for a given unit of duration.
 
     Parameters
     ----------
